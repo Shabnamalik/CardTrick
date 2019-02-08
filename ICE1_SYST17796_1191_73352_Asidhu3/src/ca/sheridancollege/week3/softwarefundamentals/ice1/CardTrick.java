@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-
 import java.util.Scanner;
 
 /**
@@ -17,35 +16,73 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        int i=0;
-        Card[] c = new Card[7];
+        Card[] magicHand = new Card[7];
         
-        Scanner Card1= new Scanner (System.in);
-        System.out.println("Enter the card value : "+Card1);
-        
-        Scanner Suit1 = new Scanner(System.in);
-        System.out.println("Enter the card value: "+Suit1);
-        
-        for (int i=0; i<Card.length; i++)
-        {
-            c[i] = new Card();
-            c[i].setValue((int)(Math.random()*7+1));
-            c[i].setSuit(Card.SUITS[(int)(Math.random()*3+1)]);
+        for(int i=0; i<magicHand.length; i++){
+            Card c = new Card();
+            c.setValue((int)(Math.random()*7+1));
+            c.setSuit(Card.SUITS[(int)(Math.random()*3+1)]);
+            magicHand[i]=c;
             
-            if(Card1==Suit1){
-                System.out.println("Card is lucky for you");
-                
             }
-            else{
-                System.out.println("Card is unlucky for you");
-            }
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        }
+        Card useru = new Card();
+        int suit = 0;
+        Scanner Cardu = new Scanner(System.in);
+        boolean upublic;
         
+        do{
+            System.out.print("Please Enter the card value="+Cardu);
+            useru.setValue(Cardu.nextInt());
+            Cardu.nextLine();
+        }while(useru.getValue()<1||upublic class CardTrick {
+    
+    public static void main(String[] args)
+    {
+        Card[] magicHand = new Card[7];
+        
+        for(int i=0; i<magicHand.length; i++){
+            Card c = new Card();
+            c.setValue((int)(Math.random()*7+1));
+            c.setSuit(Card.SUITS[(int)(Math.random()*3+1)]);
+            seru.getValue()>13);
+        
+        do{
+            System.out.print("Please enter the suit value="+Cardu);
+            suit = Cardu.nextInt();
+            Cardu.nextLine();
+            switch(suit){
+                case 1 :
+                    useru.setSuit("Hearts");
+                    break;
+                case 2 :
+                    useru.setSuit("Spade");
+                    break;
+                case 3 :
+                    useru.setSuit("Diamond");
+                    break;
+                case 4 :
+                    useru.setSuit("Club");
+                    break;  
+            }
+        }while(suit<1||suit>4);
+        boolean result = false;
+            for (Card magicHand1 : magicHand) {
+                if (magicHand1.getValue() == useru.getValue()) {
+                    result = true;
+                } else {
+                    result = false;
+                }
+            }
+        if(result==true){
+            System.out.println("Bravo! There is a match");
+        }
+        else
+            System.out.println("Sorry! There is a no match");
+        }  
+  
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-    }
+    
     
 }
