@@ -16,6 +16,8 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author
  */
 public class Card {
+
+    static int length;
     
     private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
