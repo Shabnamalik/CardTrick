@@ -30,21 +30,7 @@ public class CardTrick {
         Scanner Cardu = new Scanner(System.in);
         boolean upublic;
         
-        do{
-            System.out.print("Please Enter the card value="+Cardu);
-            useru.setValue(Cardu.nextInt());
-            Cardu.nextLine();
-        }while(useru.getValue()<1||upublic class CardTrick {
-    
-    public static void main(String[] args)
-    {
-        Card[] magicHand = new Card[7];
         
-        for(int i=0; i<magicHand.length; i++){
-            Card c = new Card();
-            c.setValue((int)(Math.random()*7+1));
-            c.setSuit(Card.SUITS[(int)(Math.random()*3+1)]);
-            seru.getValue()>13);
         
         do{
             System.out.print("Please enter the suit value="+Cardu);
